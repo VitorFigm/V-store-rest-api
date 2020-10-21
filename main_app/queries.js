@@ -22,7 +22,6 @@ async function db_query(query,inputs){
 
 ////brands
 const brands = {};
-get 
 
 function get_brand_list(req,res){
     brands.list = JSON.parse(fs.readFileSync("brand_list.json"))
