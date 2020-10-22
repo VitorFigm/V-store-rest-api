@@ -8,7 +8,7 @@ const data_base = new Sequelize(
     {
     host:process.env.DB_HOST||'localhost',
     dialect:'mysql',
-    // logging: false,
+    logging: false,
 })
 
 async function db_query(query,inputs){
@@ -22,7 +22,7 @@ async function db_query(query,inputs){
 
 ////brands
 const brands = {};
-
+get_brand_list()
 function get_brand_list(req,res){
     brands.list = JSON.parse(fs.readFileSync("brand_list.json"))
 }

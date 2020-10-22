@@ -46,7 +46,7 @@ async function query_with_filters(req, res) {
         const pages_number = await count_query_s_pages_number(where_clause,replacements)
         res.json({ 'products': products, 'pages_number': pages_number })
     }catch(err){
-        // throw new Error(err)
+        throw new Error(err)
     }
 
     function get_where_clause() {
