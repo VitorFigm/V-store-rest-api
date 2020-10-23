@@ -76,8 +76,8 @@ async function query_with_filters(req, res) {
 
     function get_order_by() {
         const order_by =
-                sort_by == "lower prices" ? "ORDER BY price DESC":
-                sort_by == "higher prices" ? "ORDER BY price ASC":
+                sort_by == "lower prices" ? "ORDER BY price ASC":
+                sort_by == "higher prices" ? "ORDER BY price DESC":
                "ORDER BY rating DESC"
         return order_by
     }
