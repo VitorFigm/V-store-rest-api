@@ -57,7 +57,7 @@ async function query_with_filters(req, res) {
             write_condition_if(is_valid(maximum_price), {to_write:'price<=?',input:maximum_price})
         ]
         where_clause = where_clause.filter((value) => value != "")
-        return "WHERE "+where_clause.join(' and ')
+        return where_clause.length!=0? "WHERE "+where_clause.join(' and '):""
 
         function write_condition_if(condition,args){
             const {to_write,input} = args
