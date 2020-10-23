@@ -52,7 +52,7 @@ async function query_with_filters(req, res) {
     function get_where_clause() {
         let where_clause = [
             write_condition_if(is_valid(product_name), {to_write:'title LIKE ?',input:`%${product_name}%`}),
-            write_condition_if(is_valid(brand) || brand== "all", {to_write:'brand =?',input:brand}),
+            write_condition_if(is_valid(brand) || brand !== "all", {to_write:'brand =?',input:brand}),
             write_condition_if(is_valid(minimum_price), {to_write:'price>=?',input:minimum_price}),
             write_condition_if(is_valid(maximum_price), {to_write:'price<=?',input:maximum_price})
         ]
