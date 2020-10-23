@@ -8,7 +8,7 @@ const data_base = new Sequelize(
     {
     host:process.env.DB_HOST||'localhost',
     dialect:'mysql',
-    logging: false,
+    // logging: false,
 })
 
 async function db_query(query,inputs){
