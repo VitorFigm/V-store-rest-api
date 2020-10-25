@@ -11,7 +11,7 @@ If we enter the root URL, it will return the 8 most rated products of those 500.
 ## filter
 We can send a GET request with a form with thoses parameters in url:   
 <br>
-filter?product_name=&brand=&maximum_price=&minimum_price=&sort_by=&page&
+<pre>filter?product_name=&brand=&maximum_price=&minimum_price=&sort_by=&page&</pre>
 ### product_name
 Used to request products that it name contains a substrig that is equal to product_name
 ### brand
